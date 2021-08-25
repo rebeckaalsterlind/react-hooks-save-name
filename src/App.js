@@ -1,11 +1,11 @@
 import './App.css';
 import Form from './Form';
 import Print from './Print';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function App() {
 
-  const [isName, setName] = useState(null);
+  const [isName, setName] = useState('');
 
   return (
     <div className="App">

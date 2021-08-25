@@ -2,22 +2,26 @@ import './Form.css';
 import React, { useState, useEffect } from 'react';
 
 function Form({name}) {
-  const [saveName, setName] = useState('');
+
+  const [saveName, setName] = useState(name);
+
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+    name(saveName)
+  }
 
 
   return (
-    <form onSubmit={() => name(saveName)} className="Form">
-  
+    <form onSubmit={handleSubmit} className="Form">
       <input 
         type="text" 
         onChange={(evt) => setName(evt.target.value)} 
-        value={saveName}
         placeholder="Name.."
         value={saveName}
       />
-      <button type="submit" onSubmit={(evt) => setName(saveName)}>Save</button>
+      <button type="submit" >Save</button>
     </form>
   );
-}
+};
 
 export default Form;
