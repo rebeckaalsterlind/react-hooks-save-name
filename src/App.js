@@ -9,8 +9,11 @@ function App() {
 
   return (
     <div className="App">
-      <Print name={isName}/>
-      <Form name={saveName => setName(saveName)}/>
+      <h1>Save name!</h1>
+      <main>
+        <Print name={isName}/>
+        <Form name={saveName => setName(saveName)}/>
+      </main>
     </div>
   );
 }
