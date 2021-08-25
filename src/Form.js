@@ -7,19 +7,26 @@ function Form({name}) {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    name(saveName)
+
   }
 
-
+  const handleDel = () => {
+    name('')
+    setName('')
+  }
+  
   return (
     <form onSubmit={handleSubmit} className="Form">
+      <button onClick={handleDel} >Delete name</button>
+    
       <input 
         type="text" 
         onChange={(evt) => setName(evt.target.value)} 
         placeholder="Name.."
         value={saveName}
+      
       />
-      <button type="submit" >Save</button>
+      <button onClick={() => name(saveName)}>Save</button>
     </form>
   );
 };
