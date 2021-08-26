@@ -2,13 +2,13 @@ import './Print.css';
 
 function Print({name}) {
 
-  
   return (
     <div className="Print">
-      <h2>Saved name:</h2>
-      <p>{name}</p>
+      <h2>{name}</h2>
+      <hr />
     </div>
   );
+  
 }
 
 export default Print;

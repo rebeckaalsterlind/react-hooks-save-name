@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Questrial', sans-serif;
+  color:rgb(47, 47, 43)
 }
 
 #root {
@@ -14,12 +16,11 @@
 
 .App {
   text-align: center;
-
-
 }
 
 .App h1 {
   margin: 2em;
+  text-transform: uppercase;
 }
 
 .App main {

@@ -1,7 +1,7 @@
 import './App.css';
 import Form from './Form';
 import Print from './Print';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 function App() {
 
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Save name!</h1>
+      <h1>Write your name !</h1>
       <main>
         <Print name={isName}/>
         <Form name={saveName => setName(saveName)}/>
@@ -19,3 +19,5 @@ function App() {
 }
 
 export default App;
+
+

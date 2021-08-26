@@ -1,5 +1,22 @@
 .Print {
-  border: 2px solid black;
-  width: 50%;
-  height: 30%;
+  height: 150px;
+  width: 200px;
+  position: fixed;
+  top: 150px;
+}
+
+.Print h2 {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 2em;
+}
+
+.Print h2::first-letter {
+  text-transform: capitalize;
+}
+
+.Print hr {
+  border: 1px dashed rgb(47, 47, 43);
+  position: absolute;
+  top: 45px;
+  width: 100%;
 }
