@@ -3,16 +3,17 @@ import Form from './Form';
 import Print from './Print';
 import React, { useState } from 'react';
 
+
 function App() {
 
   const [isName, setName] = useState<string>('');
 
   return (
     <div className="App">
-      <h1>Write your !</h1>
+      <h1>Write your name!</h1>
       <main>
-      <Print name={isName}/>
-      <Form name={saveName => setName(saveName)}/>
+        <Print name={isName}/>
+        <Form name={saveName => setName(saveName)}/>
       </main>
     </div>
   )

@@ -2,26 +2,23 @@ import './Form.css';
 import React, { useState } from 'react';
 
 interface Props {
-  name: any,
-  saveName(saveName: string): void;
-
+  name(saveName: string): void;
 }
 
 function Form(props: Props) {
-
   let {name} = props;
   
-  const [saveName, setName] = useState(name);
+  const [saveName, setName] = useState('')
   const [isDeleted, setDeleted] = useState(false);
   
-  const handleSave = () => {
+  const handleSave = ():void => {
     name(saveName);
     setDeleted(true);
   };
 
-  const handleDel = () => {
+  const handleDel = ():void => {
     name('');
-    setName(null);
+    setName('');
     setDeleted(false);
   };
 
