@@ -1,6 +1,12 @@
 import './Print.css';
 
-function Print({name}) {
+interface Props {
+  name: string
+}
+
+
+function Print(props: Props) {
+  const {name} = props;
 
   return (
     <div className="Print">

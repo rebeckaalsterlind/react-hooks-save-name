@@ -1,8 +1,16 @@
 import './Form.css';
 import React, { useState } from 'react';
 
-function Form({name}) {
+interface Props {
+  name: any,
+  saveName(saveName: string): void;
 
+}
+
+function Form(props: Props) {
+
+  let {name} = props;
+  
   const [saveName, setName] = useState(name);
   const [isDeleted, setDeleted] = useState(false);
   
@@ -13,7 +21,7 @@ function Form({name}) {
 
   const handleDel = () => {
     name('');
-    setName('');
+    setName(null);
     setDeleted(false);
   };
 
